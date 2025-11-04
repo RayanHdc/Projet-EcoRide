@@ -152,3 +152,70 @@ a {
     color: #ECEFF1;
     transition: all 0.5s ease-in-out;
 }
+
+    /* Card Presentation */
+
+.card-presentation {
+    display: block;
+    justify-content: center;
+    background-color: rgb(174, 231, 177, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 60px;
+    margin-bottom: 150px;
+}
+
+    /* Card 1 */
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: rgb(156, 224, 158, 0.5);
+    border-radius: 15px;   
+    box-shadow: #747d81 -3px 4px 8px;
+    padding: 20px 0px 25px;
+    margin: 20px;
+    margin-bottom: 50px;
+    width: 96%;
+    gap: 50px;
+}
+
+.card img {
+    height: auto;
+    max-width: 40%;
+    border: solid 2px rgb(12, 123, 16, 0.8);    
+    border-radius: 20px;
+    box-shadow: #747d81 -1px 1px 5px 1px;
+    margin-top: 40px;
+    margin: 20px 50px 20px 50px;
+}
+
+.card-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(179, 229, 252, 0.5);
+}
+
+
+.card-description {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #37474F;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.card-description h2 {
+    font-size: 35px;
+    color: #276A2A;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.card-reverse img {
+    border: solid 2px #00A7F3;
+}
