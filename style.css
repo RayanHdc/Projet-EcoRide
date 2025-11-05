@@ -6,7 +6,7 @@ body {
 
     /* Header*/
 .main-header {
-    background-color: #37474F;
+    background-color: rgb(55,71,79, 0.8);
     border-bottom: 1px solid #37474F;
     width: 100%;
 }
@@ -44,6 +44,7 @@ body {
 
 a {
     text-decoration: none;
+    font-weight: 500;
     color: #ECEFF1;
 }
 
@@ -54,6 +55,7 @@ a {
 .search-button {
     background-color: rgb(156, 224, 158, 0.7);
     color: #ECEFF1;
+    font-weight: 500;
     padding: 10px 25px;
     border: solid 1px #D7ECD9;
     border-radius: 13px;
@@ -62,7 +64,6 @@ a {
 }
 
 .search-button:hover {
-    background-color: rgb(87, 192, 122);
     font-size: 21px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
@@ -117,7 +118,7 @@ a {
 }
 
 
-    /* Form Search */
+    /* Barre de recherche */
 
 .search-bar {
     display: flex;
@@ -135,6 +136,7 @@ a {
 .search-bar input[type="text"], .search-bar input[type="date"], .search-bar select, .search-bar button {
     padding: 15px;
     font-size: 18px;
+    font-weight: 500;
     background-color: #F8F9FA;
     border: 2px solid #ccc;
     border-radius: 8px;
@@ -218,4 +220,89 @@ a {
 
 .card-reverse img {
     border: solid 2px #00A7F3;
+}
+
+    /* Footer */
+
+footer {
+    background-color: rgb(55,71,79, 0.8);
+    color: #ECEFF1;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h4 {
+    font-family: "Calibri", sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    padding: 5px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(55, 71, 79, 0.5);
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 10px 80px 10px 80px;
+    gap: 80px;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ECEFF1;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    color: rgb(16, 148, 60);
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+footer hr {
+   width: 0.1px; 
+   height: 30px; 
+   background: #ECEFF1; 
+   margin: 0 10px;
+}
+
+.footer-separator {
+    width: 80%;
+    height: 0.5px;
+    background: #ECEFF1;
+    margin: 10px auto;
+}
+
+.footer-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 250px;
+}
+
+.footer-social-media img {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: auto;
+    height: 80px;
 }
