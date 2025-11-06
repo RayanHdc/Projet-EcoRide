@@ -5,6 +5,15 @@ body {
 }
 
     /* Header*/
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .main-header {
     background-color: rgb(55,71,79, 0.8);
     border-bottom: 1px solid #37474F;
@@ -42,7 +51,7 @@ body {
     margin-right: 60px;
 }
 
-a {
+nav a {
     text-decoration: none;
     font-weight: 500;
     color: #ECEFF1;
@@ -144,9 +153,23 @@ a {
     font-family: "Poppins", sans-serif;
 }   
 
+.vr {
+   width: 0.1px; 
+   height: 55px; 
+   background: #ECEFF1; 
+   margin: 5px 10px;
+
+}
+
+.search-bar button img {
+    vertical-align: middle;
+    height: 30px;
+    width: auto;
+}
+
 .button-search-bar {
     background-color: #ECEFF1;
-    cursor: pointer;
+    cursor: pointer;   
 }
 
 .button-search-bar:hover {
@@ -221,6 +244,56 @@ a {
 .card-reverse img {
     border: solid 2px #00A7F3;
 }
+
+    /* Filtres */
+.filter-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    border: solid 2px rgb(87, 192, 122);
+    border-radius: 40px;
+    padding: 15px;
+    gap: 30px;
+    margin-bottom: 30px;
+    width: 350px;
+}
+
+aside hr {
+    width: 80%;
+   background: #ECEFF1;
+   margin: 5px 10px;
+}
+
+aside .filter-btn {
+    background-color: #ECEFF1;
+    color: #37474F;
+    font-weight: 500;
+    padding: 10px 25px;
+    border: solid 1px #D7ECD9;
+    border-radius: 13px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;  
+}
+
+aside .filter-btn:hover {
+    font-size: 19px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+aside img {
+    vertical-align: middle;
+    height: 40px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
 
     /* Footer */
 
@@ -305,4 +378,29 @@ footer hr {
     align-items: center;
     width: auto;
     height: 80px;
+}
+
+.footer-social-media a:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #ECEFF1;
+    padding: 10px 80px 10px 80px;
+}
+
+.legal-mentions {
+    text-decoration: none;
+    color: #ECEFF1;
+}
+
+.legal-mentions:hover {
+    color: rgb(16, 148, 60);
 }
