@@ -59,6 +59,7 @@ nav a {
 
 .header-right a:hover {
     color: rgb(16, 148, 60);
+    transition: all 0.3s ease-in-out;
 }
 
 .search-button {
@@ -153,6 +154,12 @@ nav a {
     font-family: "Poppins", sans-serif;
 }   
 
+.search-bar input[type="text"]:focus, .search-bar input[type="date"]:focus, .search-bar select:focus:focus {
+    outline: none;
+    border-color: rgb(46, 125, 50, 0.5);
+    box-shadow: 0 0 8px #C8E6C9;
+}
+
 .vr {
    width: 0.1px; 
    height: 55px; 
@@ -174,6 +181,7 @@ nav a {
 
 .button-search-bar:hover {
     background-color: rgb(156, 224, 158, 0.7);
+    border-color: rgb(46, 125, 50, 0.5);
     color: #ECEFF1;
     transition: all 0.5s ease-in-out;
 }
@@ -245,48 +253,125 @@ nav a {
     border: solid 2px #00A7F3;
 }
 
+
     /* Filtres */
+
 .filter-sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;   
+    justify-content: flex-start;
+    background-color: rgb(240, 241, 244, 0.3);
     border: solid 2px rgb(87, 192, 122);
     border-radius: 40px;
+    box-shadow: #747d81 -2px 2px 4px;
     padding: 15px;
-    gap: 30px;
-    margin-bottom: 30px;
+    margin: 100px 0px 30px 20px;
     width: 350px;
 }
 
+aside h3 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-style: italic;
+    text-shadow: #37474F 1px 1px 2px;
+    color: #276A2A;
+    font-weight: 600;
+    margin: 0;
+}
+
 aside hr {
-    width: 80%;
-   background: #ECEFF1;
-   margin: 5px 10px;
+    background-color: #276A2A;
+    border: none;
+    border-radius: 50px;
+    box-shadow: #747d81 -1px 0.5px 1px;
+    height: 1.5px;
+    width: 85%;
+    margin-top: 15px;
+}
+
+aside h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: #747d81 -1px 1px 1px;
+    color: #276A2A;
+    margin: 15px 0px 20px 5px;
 }
 
 aside .filter-btn {
-    background-color: #ECEFF1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
     color: #37474F;
     font-weight: 500;
-    padding: 10px 25px;
-    border: solid 1px #D7ECD9;
-    border-radius: 13px;
+    border: solid 2px #2E7D32;
+    border-radius: 30px;
     font-family: "Poppins", sans-serif;
     font-size: 15px;  
-}
-
-aside .filter-btn:hover {
-    font-size: 19px;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    padding: 0px 0px  0px 15px;
+    margin-bottom: 10px;
 }
 
 aside img {
     vertical-align: middle;
-    height: 40px;
-    margin-right: 5px;
+    height: 50px;
 }
+
+
+aside .filter-btn:hover {
+    background-color: rgb(156, 224, 158, 0.7);
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.price-filter {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.price-input {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.price-input label {
+    font-weight: 600;
+    color: #2E7D32;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
+.price-input input {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+    border: 2px solid #2E7D32;
+    border-radius: 8px;
+    width: 90px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.price-input input:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 8px #C8E6C9;
+}
+
+
+
+
+
 
 
 
@@ -342,6 +427,7 @@ footer {
 
 .footer-links a:hover {
     color: rgb(16, 148, 60);
+    transition: all 0.3s ease-in-out;
 }
 
 footer img {
