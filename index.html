@@ -31,19 +31,19 @@
                 <p>Votre plateforme de covoiturage écologique 🍃 </p>
             </div>
         </div>
-
-            <div class="search-bar">
+        <section class="main-section">
+            <div class="search-bar" required>
                 <input type="text" placeholder="Départ">
                 <input type="text" placeholder="Destination">
-                <input type="date" placeholder="Date">
-                    <select class="form-search">
-                        <option selected>Nombre de passagers</option>
+                <input type="date" placeholder="Date" style="color:#777;" onchange="this.style.color='#000';">
+                    <select class="form-search" required>
+                        <option value="" disabled selected hidden>Nombre de passagers</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                      </select>
                      <hr class="vr">   
-                        <button type="rechercher" class="button-search-bar"><img src="Items/search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
+                <button type="rechercher" class="button-search-bar"><img src="Items/search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
             </div>
             <section class="card-presentation">
                 <div class="card">
@@ -61,7 +61,10 @@
                     </div>
                 </div>
             </section>
+        </section>
         </main>
+
+
     <footer>
         <div class="footer-content">
             <h4>ÉcoRide - Voyagez autrement, pour la planète 🌿</h4>

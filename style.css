@@ -81,11 +81,14 @@ nav a {
 
     /* Introduction Image */
 
+.main-section {
+    padding: 0px 70px 20px 70px;
+}
+
 .intro-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 .intro-img img {
@@ -139,7 +142,7 @@ nav a {
     border-radius: 15px;
     padding: 15px;
     margin: 20px ;
-    margin-top: 60px;
+    margin-top: 40px;
     gap: 40px;
 }
 
@@ -152,7 +155,26 @@ nav a {
     border-radius: 8px;
     width: 300px;
     font-family: "Poppins", sans-serif;
+    color: #000;
 }   
+
+.search-bar input::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+.search-bar input[type="date"]:valid {
+  color: #000;
+}
+
+.search-bar select:invalid {
+    color: #999;
+}
+
+.search-bar select option{
+    color: #000;
+    background-color: #F8F9FA;
+}
 
 .search-bar input[type="text"]:focus, .search-bar input[type="date"]:focus, .search-bar select:focus:focus {
     outline: none;
@@ -196,10 +218,8 @@ nav a {
     padding: 20px;
     margin: 20px;
     margin-top: 60px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
-
-    /* Card 1 */
 
 .card {
     display: flex;
@@ -208,8 +228,8 @@ nav a {
     border-radius: 15px;   
     box-shadow: #747d81 -3px 4px 8px;
     padding: 20px 0px 25px;
-    margin: 20px;
-    margin-bottom: 50px;
+    margin: 40px;
+    margin-bottom: 100px;
     width: 96%;
     gap: 50px;
 }
@@ -300,6 +320,8 @@ aside h4 {
     margin: 15px 0px 20px 5px;
 }
 
+    /* Filter Buttons */
+
 aside .filter-btn {
     display: flex;
     align-items: center;
@@ -330,6 +352,8 @@ aside .filter-btn:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     cursor: pointer;
 }
+
+    /* Price Filter */
 
 .price-filter {
     display: flex;
@@ -368,7 +392,7 @@ aside .filter-btn:hover {
     box-shadow: 0 0 8px #C8E6C9;
 }
 
-
+    
 
 
 
