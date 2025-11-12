@@ -1,0 +1,243 @@
+{
+    "utilisateurs": [
+        {
+            "id": 1,
+            "nom": "Dupont",
+            "prénom": "Marie",
+            "pseudo": "MarieD",
+            "email": "marie.dupont@example.com",
+            "mot_de_passe": "Securepassword123.",
+            "role": "Chauffeur",
+            "note": 3.9, 
+            "credits": 80
+        },
+
+        {
+            "id": 2,
+            "nom": "Dufresne",
+            "prénom": "Maxence",
+            "pseudo": "MaxD",
+            "email": "maxence.dufresne@example.com",
+            "mot_de_passe": "AnotherSecurePass456!",
+            "role": "Passager", 
+            "credits": 40.50
+        },
+
+        {
+            "id": 3,
+            "nom": "Camara",
+            "prénom": "Awa",
+            "pseudo": "AwaC",
+            "email": "awa.camara@example.com",
+            "mot_de_passe": "AnotherSecure123!",
+            "role": "Passager", 
+            "credits": 46
+        },
+
+        {
+            "id": 4,
+            "nom": "Benouis",
+            "prénom": "Abbas",
+            "pseudo": "AbbasB",
+            "email": "abbas.benouis@example.com",
+            "mot_de_passe": "SecurePass456.",
+            "role": "Passager", 
+            "credits": 50
+        },
+
+        {
+            "id": 5,
+            "nom": "Chevalier",
+            "prénom": "Patrick",
+            "pseudo": "PatrickC",
+            "email": "patrick.chevalier@ecoride.com",
+            "mot_de_passe": "Ecoride789.",
+            "role": "Employé",
+            "statut": "Actif"
+        },
+
+        {
+            "id": 6,
+            "nom": "Barbier",
+            "prénom": "Sarah",
+            "pseudo": "AdminSarah",
+            "email": "sarah.barbier@example.com",
+            "mot_de_passe": "AdminPass321!",
+            "role": "Administrateur",
+            "statut": "Actif"
+        }
+    ],
+
+
+
+
+    "véhicules": [
+        {
+            "id": 1,
+            "chauffeur_id": 1,
+            "marque": "Renault",
+            "modèle": "Captur",
+            "année": 2019,
+            "couleur": "Bleu",
+            "plaque_immatriculation": "AB-123-CD",
+            "capacité": 4,
+            "carburant": "Hybride",
+            "préférences": {
+                "fumeur": false,
+                "animaux": false,
+                "autres": ["Musique Pop","Discussion appréciée"]
+            }
+        },
+
+        {
+            "id": 2,
+            "chauffeur_id": 1,
+            "marque": "Citroën",
+            "modèle": "C3",
+            "année": 2018,
+            "couleur": "Rouge",
+            "plaque_immatriculation": "EF-456-GH",
+            "capacité": 4,
+            "carburant": "Diesel",
+            "préférences": {
+                "fumeur": false,
+                "animaux": true,
+                "autres": ["Musique Pop","Discussion appréciée"]
+            }
+        }
+
+    ],
+    "covoiturages": [
+        {
+            "id": 1,
+            "véhicule_id": 1,
+            "chauffeur_id": 1,
+            "point_de_départ": "Marseille",
+            "destination": "Lyon",
+            "date_depart": "2025-07-15",
+            "heure_depart": "09:00",
+            "heure_arrivée": "13:00",
+            "durée_estimée": "3h",
+            "places_disponibles": 2,
+            "écologique": true,
+            "prix": 22.00,
+            "passagers": [2,4],
+            "statut": "Terminé"
+        },
+
+        {
+            "id": 2,
+            "véhicule_id": 2,
+            "chauffeur_id": 1,
+            "point_de_départ": "Nice",
+            "destination": "Toulon",
+            "date_depart": "2025-07-20",
+            "heure_depart": "14:00",
+            "heure_arrivée": "16:00",
+            "durée_estimée": "2h",
+            "places_disponibles": 1,
+            "écologique": false,
+            "prix": 15.00,
+            "passagers": [3,4],
+            "statut": "Prévu"
+        },
+
+        {
+            "id": 3,
+            "véhicule_id": 1,
+            "chauffeur_id": 1,
+            "point_de_départ": "Avignon",
+            "destination": "Montpellier",
+            "date_depart": "2025-07-25",
+            "heure_depart": "10:00",
+            "heure_arrivée": "12:00",
+            "durée_estimée": "2h",
+            "places_disponibles": 3,
+            "écologique": true,
+            "prix": 18.00,
+            "passagers": [3],
+            "statut": "Annulé"
+        }
+    ],
+
+    "avis": [
+        {
+            "id": 1,
+            "chauffeur_id": 1,
+            "passager_id": 2,
+            "covoiturage_id": 1,
+            "note": 5,
+            "commentaire": "Marie est une excellente conductrice, le trajet était très agréable et ponctuel.",
+            "date": "2025-07-15",
+            "statut": "Publié"
+        },
+
+        {
+            "id": 2,
+            "chauffeur_id": 1,
+            "passager_id": 4,
+            "covoiturage_id": 1,
+            "note": 3,
+            "commentaire": "Le trajet s'est bien passé, mais la voiture aurait pu être un peu plus propre.",
+            "date": "2025-07-15",
+            "statut": "Publié"
+        },
+
+        {
+            "id": 3,
+            "chauffeur_id": 1,
+            "passager_id": 4,
+            "covoiturage_id": 2,
+            "note": 4,
+            "commentaire": "Trajet parfait, Marie est très professionnelle et sympathique.",
+            "date": "2025-07-20",
+            "statut": "En attente"
+        }
+    ], 
+
+    "actions_employes": [
+        {
+            "id": 1,
+            "employe_id": 5,
+            "avis_id": 1,
+            "action": "Validé",
+            "date": "2025-07-16"
+        },
+
+        {
+            "id": 2,
+            "employe_id": 5,
+            "avis_id": 2,
+            "action": "Validé",
+            "date": "2025-07-16"
+        },
+
+        {
+            "id": 3,
+            "employe_id": 5,
+            "avis_id": 3,
+            "action": "Validation en cours",
+            "date": "2025-07-20"
+        }
+    ],
+
+    "plateforme": {
+        "benefices_credits": 2,
+        "covoiturages_par_jour": [
+            {"date": "2025-07-15", "nombre": 1},
+            {"date": "2025-07-20", "nombre": 1}
+        ],
+
+        "covoiturages_annules": [
+
+            {
+            "chauffeur": "Marie Dupont",
+            "date_annulation": "2025-07-25",
+            "motif": "Raison personnelle"
+            }
+        ],
+
+        "utilisateurs_suspendus": []
+    }
+
+}
