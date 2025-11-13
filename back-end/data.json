@@ -14,6 +14,42 @@
 
         {
             "id": 2,
+            "nom": "Montagne",
+            "prénom": "Alain",
+            "pseudo": "AlainM",
+            "email": "alain.montagne@example.com",
+            "mot_de_passe": "Montagne123.",
+            "role": "Chauffeur",
+            "note": 4.6, 
+            "credits": 90
+        },
+
+        {
+            "id": 3,
+            "nom": "Fasih",
+            "prénom": "Kader",
+            "pseudo": "KaderF",
+            "email": "kader.fasih@example.com",
+            "mot_de_passe": "FasihKad456.",
+            "role": "Chauffeur",
+            "note": 4.8, 
+            "credits": 120
+        },
+
+        {
+            "id": 4,
+            "nom": "Janus",
+            "prénom": "Claire",
+            "pseudo": "ClaireJ",
+            "email": "claire.janus@example.com",
+            "mot_de_passe": "Jajaclaire123.",
+            "role": "Chauffeur",
+            "note": 3.2, 
+            "credits": 60
+        },
+
+        {
+            "id": 5,
             "nom": "Dufresne",
             "prénom": "Maxence",
             "pseudo": "MaxD",
@@ -24,7 +60,7 @@
         },
 
         {
-            "id": 3,
+            "id": 6,
             "nom": "Camara",
             "prénom": "Awa",
             "pseudo": "AwaC",
@@ -35,7 +71,7 @@
         },
 
         {
-            "id": 4,
+            "id": 7,
             "nom": "Benouis",
             "prénom": "Abbas",
             "pseudo": "AbbasB",
@@ -46,7 +82,84 @@
         },
 
         {
-            "id": 5,
+            "id": 8,
+            "nom": "Pfister",
+            "prénom": "Alexandre",
+            "pseudo": "AlexP",
+            "email": "alex.pfister@example.com",
+            "mot_de_passe": "AlexPass789!",
+            "role": "Passager", 
+            "credits": 140
+        },
+
+        {
+            "id": 9,
+            "nom": "Legrand",
+            "prénom": "Sophie",
+            "pseudo": "SophieL",
+            "email": "sophie.legrand@example.com",
+            "mot_de_passe": "SophieSecure321!",
+            "role": "Passager", 
+            "credits": 78
+        },
+
+        {
+            "id": 10,
+            "nom": "Dos Santos",
+            "prénom": "Rita",
+            "pseudo": "RitaDS",
+            "email": "rita.dossantos@example.com",
+            "mot_de_passe": "RitaPass456!",
+            "role": "Passager", 
+            "credits": 59
+        },
+
+        {
+            "id": 11,
+            "nom": "Quinard",
+            "prénom": "Julien",
+            "pseudo": "JulienQ",
+            "email": "julien.quinard@example.com",
+            "mot_de_passe": "JulienSecure789!",
+            "role": "Passager", 
+            "credits": 87
+        },
+
+        {
+            "id": 12,
+            "nom": "Nguyen",
+            "prénom": "Linh",
+            "pseudo": "LinhN",
+            "email": "linh.nguyen@example.com",
+            "mot_de_passe": "LinhSecure456.",
+            "role": "Passager", 
+            "credits": 23
+        },
+
+        {
+            "id": 13,
+            "nom": "Watson",
+            "prénom": "Ryan",
+            "pseudo": "RyanW",
+            "email": "ryan.watson@example.com",
+            "mot_de_passe": "RyanSecure987!",
+            "role": "Passager", 
+            "credits": 83
+        },
+
+        {
+            "id": 14,
+            "nom": "Hourlier",
+            "prénom": "Jasmine",
+            "pseudo": "JasmineH",
+            "email": "jasmine.hourlier@example.com",
+            "mot_de_passe": "JasmineSecure546.",
+            "role": "Passager", 
+            "credits": 37
+        },
+
+        {
+            "id": 15,
             "nom": "Chevalier",
             "prénom": "Patrick",
             "pseudo": "PatrickC",
@@ -57,7 +170,7 @@
         },
 
         {
-            "id": 6,
+            "id": 16,
             "nom": "Barbier",
             "prénom": "Sarah",
             "pseudo": "AdminSarah",
@@ -104,6 +217,57 @@
                 "animaux": true,
                 "autres": ["Musique Pop","Discussion appréciée"]
             }
+        },
+
+        {
+            "id": 3,
+            "chauffeur_id": 2,
+            "marque": "Tesla",
+            "modèle": "Model Y",
+            "année": 2024,
+            "couleur": "Noir",
+            "plaque_immatriculation": "IJ-789-KL",
+            "capacité": 4,
+            "carburant": "Electrique",
+            "préférences": {
+                "fumeur": false,
+                "animaux": true,
+                "autres": ["Musique Rock","Adore les animaux"]
+            }
+        },
+
+        {
+            "id": 4,
+            "chauffeur_id": 3,
+            "marque": "BMW",
+            "modèle": "M5",
+            "année": 2022,
+            "couleur": "Bleu electrique",
+            "plaque_immatriculation": "MN-012-OP",
+            "capacité": 4,
+            "carburant": "Essence",
+            "préférences": {
+                "fumeur": true,
+                "animaux": false,
+                "autres": ["Musique Classique","Silence préféré","Long trajet fréquents"]
+            }
+        },
+
+        {
+            "id": 5,
+            "chauffeur_id": 4,
+            "marque": "Peugeot",
+            "modèle": "E-408",
+            "année": 2025,
+            "couleur": "Gris",
+            "plaque_immatriculation": "QR-345-ST",
+            "capacité": 4,
+            "carburant": "Electrique",
+            "préférences": {
+                "fumeur": true,
+                "animaux": true,
+                "autres": ["Aime les podcasts","Discussion appréciée"]
+            }
         }
 
     ],
@@ -114,102 +278,249 @@
             "chauffeur_id": 1,
             "point_de_départ": "Marseille",
             "destination": "Lyon",
-            "date_depart": "2025-07-15",
+            "date_depart": "2025-11-10",
             "heure_depart": "09:00",
             "heure_arrivée": "13:00",
             "durée_estimée": "3h",
             "places_disponibles": 2,
-            "écologique": true,
+            "écologique": false,
             "prix": 22.00,
-            "passagers": [2,4],
+            "passagers": [5,6],
             "statut": "Terminé"
         },
 
         {
             "id": 2,
+            "véhicule_id": 1,
+            "chauffeur_id": 1,
+            "point_de_départ": "Avignon",
+            "destination": "Montpellier",
+            "date_depart": "2025-10-25",
+            "heure_depart": "10:00",
+            "heure_arrivée": "12:00",
+            "durée_estimée": "2h",
+            "places_disponibles": 3,
+            "écologique": false,
+            "prix": 18.00,
+            "passagers": [6],
+            "statut": "Annulé"
+        },
+
+        {
+            "id": 3,
+            "véhicule_id": 3,
+            "chauffeur_id": 2,
+            "point_de_départ": "Bordeaux",
+            "destination": "Pau",
+            "date_depart": "2025-11-05",
+            "heure_depart": "14:00",
+            "heure_arrivée": "16:15",
+            "durée_estimée": "2h15",
+            "places_disponibles": 1,
+            "écologique": true,
+            "prix": 11.00,
+            "passagers": [8,9,7],
+            "statut": "Terminé"
+        },
+
+        {
+            "id": 4,
+            "véhicule_id": 4,
+            "chauffeur_id": 3,
+            "point_de_départ": "Lille",
+            "destination": "Rennes",
+            "date_depart": "2025-11-05",
+            "heure_depart": "10:00",
+            "heure_arrivée": "15:30",
+            "durée_estimée": "5h30",
+            "places_disponibles": 0,
+            "écologique": false,
+            "prix": 32.00,
+            "passagers": [10,11,12,13],
+            "statut": "Terminé"
+        },
+
+        {
+            "id": 5,
+            "véhicule_id": 5,
+            "chauffeur_id": 4,
+            "point_de_départ": "Paris",
+            "destination": "Dreux",
+            "date_depart": "2025-11-10",
+            "heure_depart": "22:00",
+            "heure_arrivée": "23:15",
+            "durée_estimée": "1h15",
+            "places_disponibles": 3,
+            "écologique": true,
+            "prix": 7.00,
+            "passagers": [12],
+            "statut": "Terminé"
+        },
+
+        {
+            "id": 6,
             "véhicule_id": 2,
             "chauffeur_id": 1,
             "point_de_départ": "Nice",
             "destination": "Toulon",
-            "date_depart": "2025-07-20",
+            "date_depart": "2025-11-22",
             "heure_depart": "14:00",
             "heure_arrivée": "16:00",
             "durée_estimée": "2h",
             "places_disponibles": 1,
             "écologique": false,
             "prix": 15.00,
-            "passagers": [3,4],
+            "passagers": [6,7],
             "statut": "Prévu"
         },
 
         {
-            "id": 3,
-            "véhicule_id": 1,
-            "chauffeur_id": 1,
-            "point_de_départ": "Avignon",
-            "destination": "Montpellier",
-            "date_depart": "2025-07-25",
-            "heure_depart": "10:00",
-            "heure_arrivée": "12:00",
-            "durée_estimée": "2h",
-            "places_disponibles": 3,
+            "id": 7,
+            "véhicule_id": 3,
+            "chauffeur_id": 2,
+            "point_de_départ": "Pau",
+            "destination": "Bordeaux",
+            "date_depart": "2025-11-22",
+            "heure_depart": "16:00",
+            "heure_arrivée": "18:15",
+            "durée_estimée": "2h15",
+            "places_disponibles": 2,
             "écologique": true,
-            "prix": 18.00,
-            "passagers": [3],
-            "statut": "Annulé"
+            "prix": 14.00,
+            "passagers": [9,8],
+            "statut": "Prévu"
+        },
+
+        {
+            "id": 8,
+            "véhicule_id": 4,
+            "chauffeur_id": 3,
+            "point_de_départ": "Rennes",
+            "destination": "Lille",
+            "date_depart": "2025-11-24",
+            "heure_depart": "05:00",
+            "heure_arrivée": "10:30",
+            "durée_estimée": "5h30",
+            "places_disponibles": 4,
+            "écologique": false,
+            "prix": 31.00,
+            "passagers": [],
+            "statut": "Prévu"
+        },
+
+        {
+            "id": 9,
+            "véhicule_id": 5,
+            "chauffeur_id": 4,
+            "point_de_départ": "Dreux",
+            "destination": "Paris",
+            "date_depart": "2025-11-24",
+            "heure_depart": "06:00",
+            "heure_arrivée": "07:15",
+            "durée_estimée": "1h15",
+            "places_disponibles": 1,
+            "écologique": true,
+            "prix": 9.00,
+            "passagers": [12,13,14],
+            "statut": "Prévu"
         }
+
     ],
 
     "avis": [
         {
             "id": 1,
             "chauffeur_id": 1,
-            "passager_id": 2,
+            "passager_id": 5,
             "covoiturage_id": 1,
             "note": 5,
             "commentaire": "Marie est une excellente conductrice, le trajet était très agréable et ponctuel.",
-            "date": "2025-07-15",
+            "date": "2025-11-10",
             "statut": "Publié"
         },
 
         {
             "id": 2,
             "chauffeur_id": 1,
-            "passager_id": 4,
+            "passager_id": 6,
             "covoiturage_id": 1,
             "note": 3,
             "commentaire": "Le trajet s'est bien passé, mais la voiture aurait pu être un peu plus propre.",
-            "date": "2025-07-15",
+            "date": "2025-11-10",
             "statut": "Publié"
         },
 
         {
             "id": 3,
-            "chauffeur_id": 1,
-            "passager_id": 4,
-            "covoiturage_id": 2,
+            "chauffeur_id": 2,
+            "passager_id": 8,
+            "covoiturage_id": 3,
             "note": 4,
-            "commentaire": "Trajet parfait, Marie est très professionnelle et sympathique.",
-            "date": "2025-07-20",
+            "commentaire": "Trajet parfait, Alain est très professionnel et sympathique.",
+            "date": "2025-11-05",
             "statut": "En attente"
+        },
+
+        {
+            "id": 4,
+            "chauffeur_id": 2,
+            "passager_id": 9,
+            "covoiturage_id": 3,
+            "note": 3,
+            "commentaire": "Le trajet s'est bien passé, mais la voiture aurait pu être un peu plus propre.",
+            "date": "2025-11-05",
+            "statut": "Publié"
+        },
+
+        {
+            "id": 5,
+            "chauffeur_id": 3,
+            "passager_id": 10,
+            "covoiturage_id": 4,
+            "note": 5,
+            "commentaire": "Kader est un conducteur exceptionnel, le trajet était confortable et agréable.",
+            "date": "2025-11-05",
+            "statut": "Publié"
+        },
+
+        {
+            "id": 6,
+            "chauffeur_id": 3,
+            "passager_id": 11,
+            "covoiturage_id": 4,
+            "note": 5,
+            "commentaire": "Le trajet avec Kader était fantastique, je le recommande vivement !",
+            "date": "2025-11-05",
+            "statut": "Publié"
+        },
+
+        {
+            "id": 7,
+            "chauffeur_id": 4,
+            "passager_id": 12,
+            "covoiturage_id": 5,
+            "note": 5,
+            "commentaire": "Claire est une conductrice très prudente et sympathique, le trajet était parfait.",
+            "date": "2025-11-11",
+            "statut": "Publié"
         }
     ], 
 
     "actions_employes": [
         {
             "id": 1,
-            "employe_id": 5,
+            "employe_id": 15,
             "avis_id": 1,
             "action": "Validé",
-            "date": "2025-07-16"
+            "date": "2025-11-10"
         },
 
         {
             "id": 2,
-            "employe_id": 5,
+            "employe_id": 15,
             "avis_id": 2,
             "action": "Validé",
-            "date": "2025-07-16"
+            "date": "2025-11-10"
         },
 
         {
@@ -217,22 +528,54 @@
             "employe_id": 5,
             "avis_id": 3,
             "action": "Validation en cours",
-            "date": "2025-07-20"
+            "date": "2025-11-05"
+        },
+
+        {
+            "id": 4,
+            "employe_id": 15,
+            "avis_id": 4,
+            "action": "Validé",
+            "date": "2025-11-05"
+        },
+
+        {
+            "id": 5,
+            "employe_id": 15,
+            "avis_id": 5,
+            "action": "Validé",
+            "date": "2025-11-05"
+        },
+
+        {
+            "id": 6,
+            "employe_id": 15,
+            "avis_id": 6,
+            "action": "Validé",
+            "date": "2025-11-05"
+        },
+
+        {
+            "id": 7,
+            "employe_id": 15,
+            "avis_id": 7,
+            "action": "Validé",
+            "date": "2025-11-11"
         }
     ],
 
     "plateforme": {
-        "benefices_credits": 2,
+        "benefices_credits": 4,
         "covoiturages_par_jour": [
-            {"date": "2025-07-15", "nombre": 1},
-            {"date": "2025-07-20", "nombre": 1}
+            {"date": "2025-11-05", "nombre": 2},
+            {"date": "2025-11-10", "nombre": 2}
         ],
 
         "covoiturages_annules": [
 
             {
             "chauffeur": "Marie Dupont",
-            "date_annulation": "2025-07-25",
+            "date_annulation": "2025-10-25",
             "motif": "Raison personnelle"
             }
         ],

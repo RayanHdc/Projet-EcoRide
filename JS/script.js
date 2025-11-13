@@ -1,28 +1,39 @@
 fetch('../back-end/data.json')
-  .then(res => res.json())
-  .then(data => {
-    const container = document.querySelector('.liste-covoiturages');
-    const modele = document.querySelector('.modele-covoiturage');
+    .then(response => response.json())
+    .then(data => { 
+        const container = document.getElementById('liste-covoiturages');
+        const modele = document.querySelector('.modele-covoiturage');
 
-    container.innerHTML = ''; // vide la zone avant d’ajouter
+        container.innerHTML = '';
 
-    data.covoiturages.forEach(trajet => {
-      const chauffeur = data.utilisateurs.find(u => u.id === trajet.chauffeur_id);
-      const voiture = data.véhicules.find(v => v.id === trajet.véhicule_id);
+        console.log('Container :', container);
+        console.log('modele :', modele);
 
-      const carte = modele.cloneNode(true);
-      carte.style.display = 'flex';
+      data.covoiturages.forEach(trajet => {
+        const copie = modele.cloneNode(true);
+        copie.classList.remove('modele-covoiturage');
+        copie.style.display = 'flex';
 
-      // Remplissage dynamique
-      carte.querySelector('.nom-chauffeur').textContent = chauffeur.prénom;
-      carte.querySelector('.voiture').textContent = `${voiture.marque} ${voiture.modèle} • ${voiture.carburant}`;
-      carte.querySelector('.depart').textContent = trajet.point_de_départ;
-      carte.querySelector('.destination').textContent = trajet.destination;
-      carte.querySelector('.horaire').textContent = `${trajet.heure_depart} → ${trajet.heure_arrivée}`;
-      carte.querySelector('.prix').textContent = `${trajet.prix} crédits`;
+        const chauffeur = data.utilisateurs.find(u => u.id === trajet.chauffeur_id);
+        const textChauffeur = `${chauffeur.pseudo}`;
+        copie.querySelector('.nom-chauffeur').textContent = textChauffeur;
 
-      // Ajoute la carte au conteneur
-      container.appendChild(carte);
-    });
+        const vehicule = data.véhicules.find(v => v.id === trajet.véhicule_id);
+        const textVoiture = `${vehicule.marque} ${ vehicule.modèle} • ${vehicule.carburant}`;
+        copie.querySelector('.voiture').textContent = textVoiture;
+        
+        copie.querySelector('.depart').textContent = trajet.point_de_départ;
+        copie.querySelector('.destination').textContent = trajet.destination;
+
+
+        const textHoraire = `${trajet.heure_depart} • ${trajet.heure_arrivée}`;
+        copie.querySelector('.horaire').textContent = textHoraire;
+
+        const textPrix = `${trajet.prix} Cr`;
+        copie.querySelector('.prix').textContent = textPrix;
+
+        container.appendChild(copie);
+    })
   })
-  .catch(err => console.error("Erreur JSON :", err));
+
+      .catch(error => console.error('Error fetching data:', error));
