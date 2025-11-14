@@ -1,3 +1,32 @@
+const stars = document.querySelectorAll('.star');
+let selectedNote = 0;
+
+stars.forEach(star => {
+  star.addEventListener('mouseover', () => {
+    const value = star.dataset.value;
+    FullStar(value);
+  });
+
+  star.addEventListener('mouseout', () => {
+    FullStar(selectedNote);
+  });
+
+star.addEventListener('click', () => {
+    selectedNote = star.dataset.value;
+    FullStar(selectedNote);
+  });
+});
+
+function FullStar(note) {
+    stars.forEach(star => {
+        if (star.dataset.value <= note) {
+                star.innerHTML = '&#9733;'; 
+            } else {
+                star.innerHTML = '&#9734;'; 
+            }
+        });
+    };
+
 fetch('../back-end/data.json')
     .then(response => response.json())
     .then(data => { 
@@ -29,11 +58,62 @@ fetch('../back-end/data.json')
         const textHoraire = `${trajet.heure_depart} • ${trajet.heure_arrivée}`;
         copie.querySelector('.horaire').textContent = textHoraire;
 
-        const textPrix = `${trajet.prix} Cr`;
-        copie.querySelector('.prix').textContent = textPrix;
+        const textPrix = `${trajet.prix} `;
+        copie.querySelector('.price-value').textContent = textPrix;
+
+        const infosEco = copie.querySelector('.infos-eco');
+
+        const fumeurIcon = copie.querySelector('.fumeur-icon');
+        const nonFumeurIcon = copie.querySelector('.non-fumeur-icon');
+
+        const animalsIcon = copie.querySelector('.animal-icon');
+        const noAnimalsIcon = copie.querySelector('.no-animals-icon');
+
+        if (trajet.écologique === true) {
+            infosEco.style.opacity = "1";
+        } else {
+            infosEco.style.opacity = "0.3";
+        }
+
+        if (vehicule.préférences.fumeur === true) {
+            fumeurIcon.style.display = 'inline';
+            nonFumeurIcon.style.display = 'none';
+        } else {
+            fumeurIcon.style.display = 'none';
+            nonFumeurIcon.style.display = 'inline';
+        }
+
+        if (vehicule.préférences.animaux === true) {
+            animalsIcon.style.display = 'inline';
+            noAnimalsIcon.style.display = 'none';
+        } else {
+            animalsIcon.style.display = 'none';
+            noAnimalsIcon.style.display = 'inline';
+        } 
+
+  const note = chauffeur.note;
+  const ratingContainer = copie.querySelector('.rating');
+
+  ratingContainer.innerHTML = '';
+
+  for (let i = 1; i <= 5; i++) {
+    const starElement = document.createElement('span');
+    starElement.classList.add('star');
+
+    if (note >= i) {
+     starElement.classList.add('full');
+    
+    } else if (note >= i - 0.5) {
+      starElement.classList.add('half');
+    }
+
+  starElement.textContent = "★";
+  ratingContainer.appendChild(starElement);
+  }
 
         container.appendChild(copie);
-    })
-  })
+      });
+
+    })  
 
       .catch(error => console.error('Error fetching data:', error));
