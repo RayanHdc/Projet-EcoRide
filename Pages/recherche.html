@@ -13,8 +13,8 @@
     <header class="main-header"> 
         <nav>
             <div class="header-left">
-                <a class="logo" href="C:\Dev\Projet EcoRide\Pages\index.html"><img src="..\assets\EcoRide.png" alt="Logo EcoRide" width="145" height="145"></a>
-                <a class="search-button" href="C:\Dev\Projet EcoRide\Pages\recherche.html">Rechercher</a>
+                <a class="logo" href="../Pages/index.html"><img src="../assets/EcoRide.png" alt="Logo EcoRide" width="145" height="145"></a>
+                <a class="search-button" href="../Pages/recherche.html">Rechercher</a>
             </div>
             <div class="header-right">
                 <a href="#connexion/inscription">Connexion / Inscription</a>
@@ -37,7 +37,7 @@
                             <option value="3">3</option>
                         </select>
                         <hr class="vr">   
-                    <button type="rechercher" class="button-search-bar"><img src="..\assets\search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
+                    <button type="rechercher" class="button-search-bar"><img src="../assets/search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
                 </div>
             </section>
             
@@ -46,8 +46,8 @@
                     <h3>Filtres</h3>
                     <hr>
                     <h4>Voyage</h4>
-                    <button class="filter-btn">Voyage écologique<img class="img-filter" src="..\assets\logo-electric.png" alt="electric-logo"></button>
-                    <button class="filter-btn">Durée...<img class="img-filter" src="..\assets\time.png" alt="timelogo"></button>
+                    <button class="filter-btn">Voyage écologique<img class="img-filter" src="../assets/logo-electric.png" alt="electric-logo"></button>
+                    <button class="filter-btn">Durée...<img class="img-filter" src="../assets/time.png" alt="timelogo"></button>
                     <hr>
 
                     <h4>Prix</h4>
@@ -72,51 +72,55 @@
                             <span class="star" data-value="5">&#9734;</span></button>
 
                     <div class="preference-filter">
-                        <button class="filter-btn">Non fumeur...<img class="img-filter" src="..\assets\no-smoke-filter.png" alt="non-smoking"></button>
-                        <button class="filter-btn">Animaux...<img class="img-filter" src="..\assets\no-animals-filter.png" alt="no-animals"></button>
+                        <button class="filter-btn">Non fumeur...<img class="img-filter" src="../assets/no-smoke-filter.png" alt="non-smoking"></button>
+                        <button class="filter-btn">Animaux...<img class="img-filter" src="../assets/no-animals-filter.png" alt="no-animals"></button>
                     </div>
                 </aside>
 
                 <section class="card-covoiturage-section">
                     <div id="liste-covoiturages">
                         <div class="card-covoiturage modele-covoiturage">
-                                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="photo-covoiturage" class="photo-chauffeur">
-
-                                    <div class="card-description">
-                                        <h2 class="nom-chauffeur"></h2>
-                                        <p class="voiture"></p>
-
-                                        <div class="rating"></div>
-                                        
-                                        <div class="prix">
-                                            <span class="price-value"></span> Cr
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="photo-covoiturage" class="photo-chauffeur">
+                                    <div class="card-infos">
+                                        <div class="card-header">
+                                            <h2 class="nom-chauffeur"></h2>
+                                                <div class="rating"></div>
+                                                <p class="voiture"></p>
+                                                <div class="itineraire">
+                                                    <span class="depart"></span>
+                                                    <span><img src="../assets/itineraire.png" alt="arrow-icon"></span>
+                                                    <span class="destination"></span>
+                                                </div>
                                         </div>
-                                
-                                        <div class="itineraire">
-                                            <span class="depart"></span>
-                                            <span> → </span>
-                                            <span class="destination"></span>
+
+                                        <div class="prix">
+                                            <span class="price-value"></span> <img src="../assets/credit.png" alt="credit-icon"> 
                                         </div>
                                         <hr>
-                                    <section class="bottom-card">
-                                        <div class="horaires">
-                                            <span class="horaire"></span> 
-                                        </div>
+                                        <section class="bottom-card">
 
-                                        <div class="preferences">
                                             <div class="infos-eco">
-                                                Voyage Éco<img class="electric-icon" src="..\assets\logo-electric.png" alt="electric-logo">  
+                                                <p>Voyage Éco</p>  
                                             </div>
 
-                                            <img class="fumeur-icon" src="..\assets\cigaret.png" alt="fumeur-icon">
-                                            <img class="non-fumeur-icon" src="..\assets\no-smoke.png" alt="non-fumeur-icon" >
-                                            <img class="animal-icon" src="..\assets\paw.png" alt="animal-friendly" >
-                                            <img class="no-animals-icon" src="..\assets\no-animals.png" alt="no-animals-icon" >
-                                        </div>
-                                        <div class="btn-reserver">
-                                            <a class="detail-btn" href="#détail">Réserver</a>
+                                            <img class="electric-icon img-filter" src="../assets/logo-electric.png" alt="electric-logo">
+
+                                            <div class="preferences">
+
+                                                 <div class="horaires">
+                                                    <span class="horaire"></span> 
+                                                </div>
+
+                                                <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon">
+                                                <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" >
+                                                <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" >
+                                                <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" >
+                                            </div>
+                                            <div class="btn-reserver">
+                                                <a class="detail-btn" href="#détail">Réserver</a>
+                                            </div>
+                                        </section>
                                     </div>
-                                    </section>
                         </div>
                     </div>
                 </section>
@@ -137,13 +141,13 @@
                     <a href="#apropos">À propos</a>
                 </div>
                     <div class="footer-social-media">
-                        <a href="https://www.facebook.com" target="_blank"><img src="..\assets\Logo FB.png" alt="Facebook" width="30" height="30"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="..\assets\Logo instagram.png" alt="Instagram" width="30" height="30"></a>
-                        <a href="https://www.Linkedin.com" target="_blank"><img src="..\assets\Logo LinkedIn.png" alt="LinkedIn" width="30" height="30"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="../assets/Logo FB.png" alt="Facebook" width="30" height="30"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="../assets/Logo instagram.png" alt="Instagram" width="30" height="30"></a>
+                        <a href="https://www.Linkedin.com" target="_blank"><img src="../assets/Logo LinkedIn.png" alt="LinkedIn" width="30" height="30"></a>
                     </div>
             <hr class="footer-separator">
             <div class="footer-bottom">
-                <p><img src="..\assets\EcoRide.png" alt="Logo ÉcoRide"> &copy; 2025 ÉcoRide. Tous Droits Réservés &nbsp;- <a href="#mentions-legales" class="legal-mentions">Mentions légales & Confidentialité</a></p>
+                <p><img src="../assets/EcoRide.png" alt="Logo ÉcoRide"> &copy; 2025 ÉcoRide. Tous Droits Réservés &nbsp;- <a href="#mentions-legales" class="legal-mentions">Mentions légales & Confidentialité</a></p>
             </div>
         </div>    
     </footer>
