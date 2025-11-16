@@ -46,7 +46,7 @@
                     <h3>Filtres</h3>
                     <hr>
                     <h4>Voyage</h4>
-                    <button class="filter-btn">Voyage écologique<img class="img-filter" src="../assets/logo-electric.png" alt="electric-logo"></button>
+                    <button id="filtreEco" class="filter-btn">Voyage écologique<img class="img-filter" src="../assets/logo-electric.png" alt="electric-logo"></button>
                     <button class="filter-btn">Durée...<img class="img-filter" src="../assets/time.png" alt="timelogo"></button>
                     <hr>
 
@@ -65,12 +65,11 @@
 
                         <h4>Préférences</h4>
                         <button class="filter-btn filter-note">
-                            <span class="star" data-value="1">&#9734;</span>
-                            <span class="star" data-value="2">&#9734;</span>
-                            <span class="star" data-value="3">&#9734;</span>
-                            <span class="star" data-value="4">&#9734;</span>
-                            <span class="star" data-value="5">&#9734;</span></button>
-
+                            <span class="filter-star" data-value="1">&#9734;</span>
+                            <span class="filter-star" data-value="2">&#9734;</span>
+                            <span class="filter-star" data-value="3">&#9734;</span>
+                            <span class="filter-star" data-value="4">&#9734;</span>
+                            <span class="filter-star" data-value="5">&#9734;</span></button>
                     <div class="preference-filter">
                         <button class="filter-btn">Non fumeur...<img class="img-filter" src="../assets/no-smoke-filter.png" alt="non-smoking"></button>
                         <button class="filter-btn">Animaux...<img class="img-filter" src="../assets/no-animals-filter.png" alt="no-animals"></button>
@@ -88,22 +87,21 @@
                                                 <p class="voiture"></p>
                                                 <div class="itineraire">
                                                     <span class="depart"></span>
-                                                    <span><img src="../assets/itineraire.png" alt="arrow-icon"></span>
+                                                    <hr class="hr-itineraire-left">
+                                                    <span class="duree-estimee"></span>
+                                                    <hr class="hr-itineraire-right">
                                                     <span class="destination"></span>
                                                 </div>
                                         </div>
-
                                         <div class="prix">
                                             <span class="price-value"></span> <img src="../assets/credit.png" alt="credit-icon"> 
                                         </div>
-                                        <hr>
+                                        <hr class="separator-card">
                                         <section class="bottom-card">
 
                                             <div class="infos-eco">
-                                                <p>Voyage Éco</p>  
+                                                <p>Voyage Éco 🍃</p>  
                                             </div>
-
-                                            <img class="electric-icon img-filter" src="../assets/logo-electric.png" alt="electric-logo">
 
                                             <div class="preferences">
 

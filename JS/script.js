@@ -1,4 +1,8 @@
-const stars = document.querySelectorAll('.star');
+let data = null;
+let container = null;
+let modele = null;
+
+const stars = document.querySelectorAll('.filter-star');
 let selectedNote = 0;
 
 stars.forEach(star => {
@@ -29,16 +33,31 @@ function FullStar(note) {
 
 fetch('../back-end/data.json')
     .then(response => response.json())
-    .then(data => { 
-        const container = document.getElementById('liste-covoiturages');
-        const modele = document.querySelector('.modele-covoiturage');
+    .then(json => { 
+        data = json;
 
-        container.innerHTML = '';
+        container = document.getElementById('liste-covoiturages');
+        modele = document.querySelector('.modele-covoiturage');
 
-        console.log('Container :', container);
-        console.log('modele :', modele);
+        afficherCovoituragesÉcologiques();
+        initialiserFiltres();
+    })
+    .catch(error => console.error('Error fetching data:', error));
 
-      data.covoiturages.forEach(trajet => {
+        
+function afficherCovoituragesÉcologiques() {
+    container.innerHTML = '';
+
+  let trajetsFiltres = data.covoiturages.filter(trajet => trajet.statut === "Prévu");
+
+const boutonEco = document.getElementById('filtreEco');
+
+if (boutonEco.classList.contains('active')) {
+    trajetsFiltres = trajetsFiltres.filter(trajet => trajet.écologique === true);
+}
+
+
+  trajetsFiltres.forEach(trajet => {
         const copie = modele.cloneNode(true);
         copie.classList.remove('modele-covoiturage');
         copie.style.display = 'flex';
@@ -53,6 +72,7 @@ fetch('../back-end/data.json')
         
         copie.querySelector('.depart').textContent = trajet.point_de_départ;
         copie.querySelector('.destination').textContent = trajet.destination;
+        copie.querySelector('.duree-estimee').textContent = trajet.durée_estimée;
 
 
         const textHoraire = `${trajet.heure_depart} • ${trajet.heure_arrivée}`;
@@ -62,6 +82,10 @@ fetch('../back-end/data.json')
         copie.querySelector('.price-value').textContent = textPrix;
 
         const infosEco = copie.querySelector('.infos-eco');
+
+          if (!trajet.écologique) {
+            infosEco.style.opacity = "0.3";
+          }
 
         const fumeurIcon = copie.querySelector('.fumeur-icon');
         const nonFumeurIcon = copie.querySelector('.non-fumeur-icon');
@@ -113,7 +137,13 @@ fetch('../back-end/data.json')
 
         container.appendChild(copie);
       });
+}
 
-    })  
+function initialiserFiltres() {
+    const boutonEco = document.getElementById('filtreEco');
 
-      .catch(error => console.error('Error fetching data:', error));
+    boutonEco.addEventListener('click', () => {
+    boutonEco.classList.toggle('active');
+    afficherCovoituragesÉcologiques();
+});
+}

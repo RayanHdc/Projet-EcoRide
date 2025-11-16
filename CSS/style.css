@@ -374,6 +374,14 @@ aside .filter-btn:hover {
     cursor: pointer;
 }
 
+.filter-btn.active {
+    transition: all 0.5s ease-in-out;
+    background-color: #d0ffd6;
+    border: 2px solid #4CAF50;
+    box-shadow: #747d81 -1px 1px 3px;
+}
+
+
     /* Price Filter */
 
 .price-filter {
@@ -423,13 +431,13 @@ aside .filter-btn:hover {
     cursor: pointer;
 }
 
-.filter-note .star {
+.filter-note .filter-star {
     font-size: 24px;
     color: #2E7D32;
 
 }
 
-.filter-note .star:hover {
+.filter-note .filter-star:hover {
     color: rgb(16, 148, 60);
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
@@ -563,21 +571,49 @@ aside .filter-btn:hover {
 
 .itineraire {
     display: flex;
-    flex-direction: row;
-    gap: 125px;
+    align-items: center;
+    width: 100%;
     margin-bottom: 30px;
     margin-top: 20px;
 }
 
-.itineraire img {
+
+.hr-itineraire-left, .hr-itineraire-right {
+    all: unset;
+    position: relative;
+    display: block;
+    border: none;
+    background-color: #2E2E2E;
+    border-radius: 50px;
+    margin: 0px 20px;
+    width: 80px;
+    height: 3px;
+}
+
+.hr-itineraire-left::before, .hr-itineraire-right::after {
     position: absolute;
-    top: 151px;
-    left: 420px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 250px;
-    height: 200px;
-    object-fit: contain;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border: 3px solid #2E2E2E;
+    border-radius: 50%;
+    background-color: #ECEFF1;
+}
+
+.hr-itineraire-left::before {
+    left: -6px;
+}
+
+.hr-itineraire-right::after {
+    right: -6px;
+}
+
+.duree-estimee {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
 }
 
     /* Bottom Card Section */
@@ -588,7 +624,7 @@ aside .filter-btn:hover {
     gap: 10px;
 }
 
-.card-infos hr {
+.card-infos .separator-card {
     background-color: #2E2E2E;
     border: none;
     border-radius: 50px;
@@ -622,17 +658,13 @@ aside .filter-btn:hover {
     margin-left: 30px;
 }
 
-.electric-icon {
-    height: 120px;
-    width: auto;
-    margin-left: -70px;
-
-}
-
 .infos-eco p{
+    color: #276A2A;
+    text-shadow: #747d81 -1px 1px 1px;
     margin-top: 10px;
+    margin-left: 30px;
+    text-shadow: #4CAF50 -1px 1px 2px;
 }
-
 
 .horaires {
     font-family: "Poppins", sans-serif;
