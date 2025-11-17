@@ -45,9 +45,20 @@
                 <aside class="filter-sidebar">
                     <h3>Filtres</h3>
                     <hr>
+
                     <h4>Voyage</h4>
                     <button id="filtreEco" class="filter-btn">Voyage écologique<img class="img-filter" src="../assets/logo-electric.png" alt="electric-logo"></button>
-                    <button class="filter-btn">Durée...<img class="img-filter" src="../assets/time.png" alt="timelogo"></button>
+
+                        <div class="filter-btn" id="btn-duration">
+                            <select id="duration-filter" class="select-duration">
+                                <option value="all">Toutes durées</option>
+                                <option value="60"> < 1 heure</option>
+                                <option value="120"> < 2 heures</option>
+                                <option value="180"> < 3 heures</option>
+                                <option value="240-600"> + 4 heures </option>
+                            </select>
+                            <img class="img-filter" src="../assets/time.png" alt="timelogo">
+                        </div>
                     <hr>
 
                     <h4>Prix</h4>
@@ -71,12 +82,13 @@
                             <span class="filter-star" data-value="4">&#9734;</span>
                             <span class="filter-star" data-value="5">&#9734;</span></button>
                     <div class="preference-filter">
-                        <button class="filter-btn">Non fumeur...<img class="img-filter" src="../assets/no-smoke-filter.png" alt="non-smoking"></button>
-                        <button class="filter-btn">Animaux...<img class="img-filter" src="../assets/no-animals-filter.png" alt="no-animals"></button>
+                        <button class="filter-btn">Non fumeur<img class="img-filter" src="../assets/no-smoke-filter.png" alt="non-smoking"></button>
+                        <button class="filter-btn">Sans animaux<img class="img-filter" src="../assets/no-animals-filter.png" alt="no-animals"></button>
                     </div>
                 </aside>
 
                 <section class="card-covoiturage-section">
+                     <p id="aucun-resultat" class="no-result">Aucun Covoiturage ne correspond à votre recherche ! 😕 </p>
                     <div id="liste-covoiturages">
                         <div class="card-covoiturage modele-covoiturage">
                                     <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="photo-covoiturage" class="photo-chauffeur">

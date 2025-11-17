@@ -381,6 +381,43 @@ aside .filter-btn:hover {
     box-shadow: #747d81 -1px 1px 3px;
 }
 
+.no-result {
+    display: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    color: #276A2A;
+    font-weight : 600;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.select-duration {
+    background-color: transparent;
+    outline: none;
+    color: #37474F;
+    font-weight: 510;
+    border: none;
+    border-radius: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;  
+    width: 150px;
+    cursor: pointer;
+}
+
+.filter-btn img {
+    width: auto;
+    margin-left: 10px;
+}
+
+
+
+#duration-filter.active {
+    transition: all 0.5s ease-in-out;
+    background-color: #d0ffd6;
+    border: 2px solid #4CAF50;
+    box-shadow: #747d81 -1px 1px 3px;
+}
+
 
     /* Price Filter */
 
