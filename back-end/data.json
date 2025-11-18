@@ -231,7 +231,7 @@
             "carburant": "Electrique",
             "préférences": {
                 "fumeur": false,
-                "animaux": true,
+                "animaux": false,
                 "autres": ["Musique Rock","Adore les animaux"]
             }
         },

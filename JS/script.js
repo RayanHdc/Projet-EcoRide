@@ -1,6 +1,8 @@
 let data = null;
 let container = null;
 let modele = null;
+let limiteCovoiturages = 4;
+let incrementCovoiturages = 4;
 
 const stars = document.querySelectorAll('.filter-star');
 let selectedNote = 0;
@@ -51,7 +53,23 @@ function afficherCovoiturages() {
         return minutes <= parseInt(dureeChoisieValue);
       });
     }
+
+    const filtreFumeur = document.getElementById('filterFumeur');
+    if (filtreFumeur.classList.contains('active')) {
+      trajetsFiltres = trajetsFiltres.filter(trajet => {
+          let vehicule = data.véhicules.find(v => v.id === trajet.véhicule_id);
+          return vehicule.préférences.fumeur === false;
+        })
   }
+
+  const filtreAnimaux = document.getElementById('filterAnimaux');
+  if (filtreAnimaux.classList.contains('active')) {
+    trajetsFiltres = trajetsFiltres.filter(trajet => {
+        let vehicule = data.véhicules.find(v => v.id === trajet.véhicule_id);
+        return vehicule.préférences.animaux === false;
+      })
+  }
+}
 
   const minInput = document.getElementById('min-price');
   const maxInput = document.getElementById('max-price');
@@ -75,7 +93,9 @@ function afficherCovoiturages() {
   }
   if (aucunResultat) aucunResultat.style.display = 'none';
 
-  trajetsFiltres.forEach(trajet => {
+const trajetsAffiches = trajetsFiltres.slice(0, limiteCovoiturages);
+
+  trajetsAffiches.forEach(trajet => {
     const copie = modele.cloneNode(true);
     copie.classList.remove('modele-covoiturage');
     copie.style.display = 'flex';
@@ -181,6 +201,25 @@ function initialiserFiltres() {
       afficherCovoiturages();
     });
   }
+
+  const filtreFumeur = document.getElementById('filterFumeur');
+  filtreFumeur.addEventListener('click', () => {
+    filtreFumeur.classList.toggle('active');
+    afficherCovoiturages();
+  });
+
+  const filtreAnimaux = document.getElementById('filterAnimaux');
+  filtreAnimaux.addEventListener('click', () => {
+    filtreAnimaux.classList.toggle('active');
+    afficherCovoiturages();
+  });
+
+  const loadMoreBtn = document.getElementById('load-more-btn');
+
+  loadMoreBtn.addEventListener('click', () => {
+    limiteCovoiturages += incrementCovoiturages;
+    afficherCovoiturages();
+  });
 
   const minPriceInput = document.getElementById('min-price');
   const maxPriceInput = document.getElementById('max-price');

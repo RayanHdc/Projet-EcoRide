@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+    <title>Détails Covoiturage - EcoRide</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/EcoRide.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header"> 
+        <nav>
+            <div class="header-left">
+                <a class="logo" href="../Pages/index.html"><img src="../assets/EcoRide.png" alt="Logo EcoRide" width="145" height="145"></a>
+                <a class="search-button" href="../Pages/recherche.html">Rechercher</a>
+            </div>
+            <div class="header-right">
+                <a href="#connexion/inscription">Connexion / Inscription</a>
+                <a href="#contact">Contact</a>
+                <a href="#footer">À propos</a>
+            </div>
+        </nav> 
+    </header>
+    
+
+    <main class="main-section-details">
+        <section class="details-section">
+            <div class="details-trajet">
+
+                <h2 class="date-trajet"></h2>
+
+                    <div class="horaires-detail">
+                        <span class="horaire"></span>
+                    </div>
+
+                    <div class="duree-estimee-detail">
+                        <span class="duree-estimee"></span>
+                    </div>
+
+                    <div class="itineraire-detail">
+                        <div class="itineraire">
+                            <span class="depart"></span>
+                            <hr class="hr-itineraire-left">
+                            <span class="destination"></span>
+                            <hr class="hr-itineraire-right">
+                        </div>
+                    </div>
+
+                    <hr class="vr">
+
+                    <div class="infos-eco-detail">
+                        <div class="infos-eco">
+                            <p>Voyage Écologique 🍃</p>  
+                        </div>
+                    </div>
+
+                    <div class="places-restantes">
+                        <p class="place-restantes-value">Places restantes</p>
+                    </div>
+                       
+                        <div class="preferences">
+                            <div class="preference-icons">
+                                <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon"><p>Fumeurs accepté(e)s</p>
+                            </div> 
+
+                            <div class="preference-icons">
+                                <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" ><p>Fumeurs non accepté(e)s</p>
+                            </div>
+
+                            <div class="preference-icons">
+                                <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" ><p>Animaux accepté(e)s</p>
+                            </div>
+
+                            <div class="preference-icons">
+                                <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
+                            </div>
+                        </div>
+
+                    <div class="prix-detail">
+                        <span class="price-value"></span> 
+                        <img src="../assets/credit.png" alt="credit-icon"> 
+                    </div>
+
+            </div>
+
+            <aside class="reserver-detail-section">
+
+                <h2 class="date-trajet"></h2>
+
+                <div class="horaires-aside">
+                    <span class="horaire"></span>
+                </div>
+
+                <div class="duree-estimee-aside">
+                    <span class="duree-estimee"></span>
+                </div>
+
+                <div class="itineraire-aside">
+                    <div class="itineraire">
+                        <span class="depart"></span>
+                        <hr class="hr-itineraire-left">
+                        <span class="destination"></span>
+                        <hr class="hr-itineraire-right">
+                    </div>
+                </div>
+
+                    <div class="nombre-passagers"></div>
+
+                        <hr>
+                <div class="btn-reserver-detail-container">
+                    <a class="btn-reserver-detail" href="#confirmer-reservation">Réserver ce trajet</a>
+                </div>
+            </aside>
+        </section>
+
+        <section class="description-conducteur-section">
+            <div class="detail-infos">
+                <div class="detail-header">
+                    <h2 class="nom-chauffeur"></h2>
+                    <div class="rating"></div>
+                    <p class="voiture"></p>
+                </div>
+
+                    <div class="preferences">
+                            <div class="preference-icons">
+                                <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon"><p>Fumeurs accepté(e)s</p>
+                            </div> 
+
+                            <div class="preference-icons">
+                                <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" ><p>Fumeurs non accepté(e)s</p>
+                            </div>
+
+                            <div class="preference-icons">
+                                <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" ><p>Animaux accepté(e)s</p>
+                            </div>
+
+                            <div class="preference-icons">
+                                <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
+                            </div>
+                    </div>
+
+                    <hr class="vr">
+
+                    <div class="autres-infos"></div>
+
+                <hr>
+                <div class="avis-conducteur">
+                    <h3>Avis</h3>
+                        <div class="liste-avis"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<footer id="footer">
+        <div class="footer-content">
+            <h4>ÉcoRide - Voyagez autrement, pour la planète 🌿</h4>
+                <div class="footer-links">
+                    <a href="..\Pages\index.html">Accueil</a>
+                    <hr>
+                    <a href="..\Pages\recherche.html">Rechercher</a>
+                    <hr>
+                    <a href="#connexion/inscription">Connexion</a>
+                    <hr>
+                    <a href="#contact">Contact</a>
+                    <hr>
+                    <a href="#apropos">À propos</a>
+                </div>
+                    <div class="footer-social-media">
+                        <a href="https://www.facebook.com" target="_blank"><img src="../assets/Logo FB.png" alt="Facebook" width="30" height="30"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="../assets/Logo instagram.png" alt="Instagram" width="30" height="30"></a>
+                        <a href="https://www.Linkedin.com" target="_blank"><img src="../assets/Logo LinkedIn.png" alt="LinkedIn" width="30" height="30"></a>
+                    </div>
+            <hr class="footer-separator">
+            <div class="footer-bottom">
+                <p><img src="../assets/EcoRide.png" alt="Logo ÉcoRide"> &copy; 2025 ÉcoRide. Tous Droits Réservés &nbsp;- <a href="#mentions-legales" class="legal-mentions">Mentions légales & Confidentialité</a></p>
+            </div>
+        </div>    
+    </footer>
