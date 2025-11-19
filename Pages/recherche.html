@@ -27,13 +27,22 @@
     <main class="main-section">
             <section>
                 <div class="search-bar" required>
-                    <input type="text" placeholder="Départ">
-                    <input type="text" placeholder="Destination">
-                    <input type="date" placeholder="Date" style="color:#777;" onchange="this.style.color='#000';">
-                        <select class="form-search" required>
-                            <option value="" disabled selected hidden>Nombre de passagers</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
+                    <select id="select-depart" required>
+                        <option value="" disabled selected hidden>Départ</option>
+                    </select>
+
+                    <select id="select-destination" required>
+                        <option value="" disabled selected hidden>Destination</option>
+                    </select>
+
+                    <select id="select-date" required>
+                        <option value="" disabled selected hidden>Date</option>
+                    </select>
+
+                    <select class="form-search" required>
+                        <option value="" disabled selected hidden>Nombre de passagers</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
                         <hr class="vr">   
@@ -127,7 +136,7 @@
                                                 <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" >
                                             </div>
                                             <div class="btn-reserver">
-                                                <a class="detail-btn" href="../Pages/details.html">Réserver</a>
+                                                <a class="detail-btn">Réserver</a>
                                             </div>
                                         </section>
                                     </div>

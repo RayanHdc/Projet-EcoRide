@@ -3,9 +3,9 @@ let container = null;
 let modele = null;
 let limiteCovoiturages = 4;
 let incrementCovoiturages = 4;
+let selectedNote = 0;
 
 const stars = document.querySelectorAll('.filter-star');
-let selectedNote = 0;
 
 function FullStar(note) {
   stars.forEach(star => {
@@ -23,6 +23,37 @@ fetch('../back-end/data.json')
     data = json;
     container = document.getElementById('liste-covoiturages');
     modele = document.querySelector('.modele-covoiturage');
+
+    const covoit = data.covoiturages;
+
+    const villesDepart= [...new Set(covoit.map(t => t.point_de_départ))];
+    const villesDestination= [...new Set(covoit.map(t => t.destination))];
+    const datesCovoit = [...new Set(covoit
+      .map(t => t.date_depart)
+      .filter(date => date !== undefined && date !== null && date !== '')
+    )];
+
+    const selectDepart = document.getElementById('select-depart');
+    const selectDestination = document.getElementById('select-destination');
+    const selectDate = document.getElementById('select-date');
+
+function remplirSelect(select, valeurs) {
+  valeurs.forEach(valeur => {
+    const option = document.createElement('option');
+    option.value = valeur;
+    option.textContent = valeur;
+    select.appendChild(option);
+  });
+}
+
+console.log(villesDepart);
+console.log(villesDestination);
+console.log(datesCovoit);
+
+remplirSelect(selectDepart, villesDepart);
+remplirSelect(selectDestination, villesDestination);
+remplirSelect(selectDate, datesCovoit);
+
 
     initialiserFiltres();
     afficherCovoiturages();
@@ -99,6 +130,10 @@ const trajetsAffiches = trajetsFiltres.slice(0, limiteCovoiturages);
     const copie = modele.cloneNode(true);
     copie.classList.remove('modele-covoiturage');
     copie.style.display = 'flex';
+
+    copie.addEventListener('click', () => {
+      window.location.href = `../Pages/details.html?id=${trajet.id}`;
+    });
 
     const chauffeur = data.utilisateurs.find(u => u.id === trajet.chauffeur_id);
     const vehicule = data.véhicules.find(v => v.id === trajet.véhicule_id);
@@ -266,4 +301,4 @@ function dureeEnMinutes(duree) {
     m = parseInt(duree) || 0;
   }
   return h * 60 + m;
-}
+};

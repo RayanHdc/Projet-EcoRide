@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script src="../js/script.js" defer></script>
+    <script src="../js/details.js" defer></script>
     <title>Détails Covoiturage - EcoRide</title>
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/EcoRide.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -31,82 +31,117 @@
 
                 <h2 class="date-trajet"></h2>
 
-                    <div class="horaires-detail">
-                        <span class="horaire"></span>
-                    </div>
-
-                    <div class="duree-estimee-detail">
-                        <span class="duree-estimee"></span>
-                    </div>
-
+                <div class="block-trajet">
                     <div class="itineraire-detail">
-                        <div class="itineraire">
-                            <span class="depart"></span>
-                            <hr class="hr-itineraire-left">
-                            <span class="destination"></span>
-                            <hr class="hr-itineraire-right">
-                        </div>
-                    </div>
+                        <div class="itineraire-section">
 
-                    <hr class="vr">
-
-                    <div class="infos-eco-detail">
-                        <div class="infos-eco">
-                            <p>Voyage Écologique 🍃</p>  
-                        </div>
-                    </div>
-
-                    <div class="places-restantes">
-                        <p class="place-restantes-value">Places restantes</p>
-                    </div>
-                       
-                        <div class="preferences">
-                            <div class="preference-icons">
-                                <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon"><p>Fumeurs accepté(e)s</p>
-                            </div> 
-
-                            <div class="preference-icons">
-                                <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" ><p>Fumeurs non accepté(e)s</p>
+                             <div class="col horaire-detail">
+                                <span class="horaire-depart"></span>
+                                <span class="horaire-destination"></span>
                             </div>
 
-                            <div class="preference-icons">
-                                <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" ><p>Animaux accepté(e)s</p>
+                            <div class="col ligne-itineraire">
+                                <span class="point point-depart"></span>
+
+                                <span class="vr-itineraire top"></span>
+
+                                <div class="duree-estimee-detail">
+                                    <span class="duree-estimee"></span>
+                                </div>
+
+                                <span class="vr-itineraire bottom"></span>
+                                
+                                <span class="point point-destination"></span>
                             </div>
 
-                            <div class="preference-icons">
-                                <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
+                            <div class="col ville-detail">
+                                <span class="depart"></span>
+                                <span class="destination"></span>
+                            </div>
+                        </div>    
+
+                    </div>
+
+                    <span class="vr-separator"></span>
+
+                    <div class="infos-droite">
+                        <div class="infos-eco-detail">
+                            <div class="infos-eco">
+                                <p>Voyage Écologique 🍃</p>  
                             </div>
                         </div>
 
-                    <div class="prix-detail">
-                        <span class="price-value"></span> 
-                        <img src="../assets/credit.png" alt="credit-icon"> 
-                    </div>
+                        <div class="places-disponibles">
+                            <p class="places-disponibles-value">Places restantes</p>
+                        </div>
+                        
+                            <div class="preferences">
+                                <div id="smoking-yes" class="preference-icons">
+                                    <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon"><p>Fumeurs accepté(e)s</p>
+                                </div> 
 
+                                <div id="smoking-no" class="preference-icons">
+                                    <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" ><p>Fumeurs non accepté(e)s</p>
+                                </div>
+
+                                <div id="animals-yes"class="preference-icons">
+                                    <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" ><p>Animaux accepté(e)s</p>
+                                </div>
+
+                                <div id="animals-no" class="preference-icons">
+                                    <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
+                                </div>
+                            </div>
+
+                        <div class="prix-detail">
+                            <span class="price-value"></span> 
+                            <img src="../assets/credit.png" alt="credit-icon"> 
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <aside class="reserver-detail-section">
 
                 <h2 class="date-trajet"></h2>
 
-                <div class="horaires-aside">
-                    <span class="horaire"></span>
-                </div>
+                    <div class="itineraire-detail">
+                        <div class="itineraire-section">
 
-                <div class="duree-estimee-aside">
-                    <span class="duree-estimee"></span>
-                </div>
+                             <div class="col horaire-detail">
+                                <span class="horaire-depart"></span>
+                                <span class="horaire-destination"></span>
+                            </div>
 
-                <div class="itineraire-aside">
-                    <div class="itineraire">
-                        <span class="depart"></span>
-                        <hr class="hr-itineraire-left">
-                        <span class="destination"></span>
-                        <hr class="hr-itineraire-right">
+                            <div class="col ligne-itineraire">
+                                <span class="point point-depart"></span>
+
+                                <span class="vr-itineraire top"></span>
+
+                                <div class="duree-estimee-detail">
+                                    <span class="duree-estimee"></span>
+                                </div>
+
+                                <span class="vr-itineraire bottom"></span>
+                                
+                                <span class="point point-destination"></span>
+                            </div>
+
+                            <div class="col ville-detail">
+                                <span class="depart"></span>
+                                <span class="destination"></span>
+                            </div>
+                        </div>    
+
                     </div>
-                </div>
 
-                    <div class="nombre-passagers"></div>
+                    <div class="infos-payment">
+                        <div class="nombre-passagers"></div>
+                            <div class="prix-detail">
+                            <span class="price-value"></span> 
+                            <img src="../assets/credit.png" alt="credit-icon"> 
+                        </div>
+                    </div>    
 
                         <hr>
                 <div class="btn-reserver-detail-container">

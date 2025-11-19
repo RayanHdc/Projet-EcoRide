@@ -772,6 +772,12 @@ aside .filter-btn:hover {
     /*PAGE DETAILS COVOITURAGE*/
 
 
+main {
+    font-family: "Poppins", sans-serif;
+    color: #2E2E2E;
+    margin: 0px 70px 20px 70px;    
+}
+
 .main-section-details {
     display: flex;
     flex-direction: column;
@@ -800,9 +806,184 @@ aside .filter-btn:hover {
     border-radius: 25px;
     width: 70%;
     padding: 20px;
+    padding-bottom: 50px;
     margin: 60px 20px 0px 0px;
-    margin-top: 60px;
 }
+
+.details-trajet h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #276A2A;
+    margin: 10px 0px 25px 40px;
+}
+
+.block-trajet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+    /* Resume travel */
+
+.itineraire-detail .itineraire-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ligne-itineraire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vr-itineraire {
+    background-color: #2E2E2E;
+    border-radius: 50px;
+    width: 3px;
+    height: 25px;
+}
+
+.vr-itineraire.top {
+    height: 25px;
+}
+
+.vr-itineraire.bottom {
+    height: 25px;
+}
+
+.duree-estimee {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    margin: 4px;
+}
+
+.point {
+    width: 8px;
+    height: 8px;
+    background-color: #ECEFF1;
+    border: 3px solid #2E2E2E;
+    border-radius: 50%;
+}
+
+.horaire-detail, .ville-detail {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 65px;
+}
+
+.ville-detail {
+    margin-left: 8px;
+}
+
+    /* Preferences Section */
+
+.vr-separator {
+    background-color: #2E2E2E;
+    border-radius: 50px;
+    width: 3px;
+    height: 150px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+
+.infos-droite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+    /*Price travel*/
+
+.prix-detail {   
+    position: absolute;
+    bottom: 97%;
+    left: 210%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    font-style: italic;
+    color: #2E2E2E;
+    margin: 10px 10px 0px 0px;
+}
+
+.prix-detail img {
+    height: 100px;
+    width: auto;
+}
+
+.infos-droite .preferences {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.infos-droite .preference-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.infos-eco-detail, .places-disponibles-value {
+    margin: 5px 0px 10px 15px; 
+}
+
+.preference-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.infos-droite .preferences .preference-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.preference-icons img {
+    height: 38px;  
+    width: auto;
+    object-fit: contain ;
+    margin: 0;
+    padding: 0;
+}    
+
+.preference-icons p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.infos-eco-detail .infos-eco p{
+    margin: 0;
+    padding: 0;
+}
+
+
+    /* Reserver Detail Section */
 
 .reserver-detail-section {
     display: block;
@@ -816,8 +997,24 @@ aside .filter-btn:hover {
     width: 30%;
 }
 
+
+aside .prix-detail {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+    font-size: 30px;
+
+}
+
+aside .prix-detail img {
+    height: 60px;
+    width: auto;
+}
+
+    /* Description conducteur */
+
 .description-conducteur-section {
-    display: block;
     display: block;
     flex-direction: column;
     align-items: flex-end;
