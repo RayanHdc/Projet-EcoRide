@@ -5,6 +5,12 @@ let limiteCovoiturages = 4;
 let incrementCovoiturages = 4;
 let selectedNote = 0;
 
+const params = new URLSearchParams(window.location.search);
+const searchDepart = params.get('depart') || '';
+const searchDestination = params.get('destination') || '';
+const searchDate = params.get('date') || '';
+const searchPassengers = parseInt(params.get('passengers')) || 0;
+
 const stars = document.querySelectorAll('.filter-star');
 
 function FullStar(note) {
@@ -17,14 +23,14 @@ function FullStar(note) {
   });
 }
 
-fetch('../back-end/data.json')
+fetch('../back-end/data.json')  /*chemin vers le fichier JSON*/
   .then(response => response.json())
   .then(json => {
     data = json;
     container = document.getElementById('liste-covoiturages');
     modele = document.querySelector('.modele-covoiturage');
 
-    const covoit = data.covoiturages;
+    const covoit = data.covoiturages.filter(t => t.statut === 'Prévu');
 
     const villesDepart= [...new Set(covoit.map(t => t.point_de_départ))];
     const villesDestination= [...new Set(covoit.map(t => t.destination))];
@@ -37,8 +43,8 @@ fetch('../back-end/data.json')
     const selectDestination = document.getElementById('select-destination');
     const selectDate = document.getElementById('select-date');
 
-function remplirSelect(select, valeurs) {
-  valeurs.forEach(valeur => {
+    function remplirSelect(select, valeurs) {
+    valeurs.forEach(valeur => {
     const option = document.createElement('option');
     option.value = valeur;
     option.textContent = valeur;
@@ -46,14 +52,58 @@ function remplirSelect(select, valeurs) {
   });
 }
 
-console.log(villesDepart);
-console.log(villesDestination);
-console.log(datesCovoit);
-
 remplirSelect(selectDepart, villesDepart);
 remplirSelect(selectDestination, villesDestination);
 remplirSelect(selectDate, datesCovoit);
 
+selectDepart.addEventListener('change', () => {
+
+  const departChoisi = selectDepart.value;
+  selectDestination.innerHTML = '<option value="" disabled selected hidden>Destination</option>';
+  selectDate.innerHTML = '<option value="" disabled selected hidden>Date</option>';
+
+  const destinationPossibles = covoit
+    .filter(t => t.point_de_départ === departChoisi)
+    .map(t => t.destination);
+
+    const destinationsUniques = [...new Set(destinationPossibles)];
+
+    remplirSelect(selectDestination, destinationsUniques);
+
+  const datesPossibles = covoit
+    .filter(t => t.point_de_départ === departChoisi)
+    .map(t => t.date_depart)
+    .filter(date => date !== undefined && date !== null && date !== '');
+
+    const datesUniques = [...new Set(datesPossibles)];
+
+    remplirSelect(selectDate, datesUniques);
+});
+
+
+document.querySelector('.button-search-bar').addEventListener('click', () => {
+  const departChoisi = selectDepart.value;
+  const destinationChoisie = selectDestination.value;
+  const dateChoisie = selectDate.value;
+
+  window.location.href = `../Pages/recherche.html?depart=${departChoisi}&destination=${destinationChoisie}&date=${dateChoisie}`;
+});
+
+const btnSearchBar = document.getElementById('btn-search');
+
+btnSearchBar.addEventListener('click', () => {
+  const departChoisi = document.getElementById('select-depart').value;
+  const destinationChoisie = document.getElementById('select-destination').value;
+  const dateChoisie = document.getElementById('select-date').value;
+  const passagerCount = document.getElementById('select-passengers').value;
+
+  if (!departChoisi || !destinationChoisie || !dateChoisie || !passagerCount) { 
+    
+    document.querySelector('.search-bar select:invalid')?.focus();
+    return;
+  }
+  window.location.href = `../Pages/recherche.html?depart=${departChoisi}&destination=${destinationChoisie}&date=${dateChoisie}`;
+});
 
     initialiserFiltres();
     afficherCovoiturages();
@@ -61,11 +111,22 @@ remplirSelect(selectDate, datesCovoit);
   .catch(error => console.error('Error fetching data:', error));
 
 function afficherCovoiturages() {
+
   if (!data || !container || !modele) return;
 
   container.innerHTML = '';
 
   let trajetsFiltres = data.covoiturages.filter(t => t.statut === 'Prévu');
+
+  if (searchDepart) {
+    trajetsFiltres = trajetsFiltres.filter(t => t.point_de_départ === searchDepart);
+  }
+  if (searchDestination) {
+    trajetsFiltres = trajetsFiltres.filter(t => t.destination === searchDestination);
+  }
+  if (searchDate) {
+    trajetsFiltres = trajetsFiltres.filter(t => t.date_depart === searchDate);
+  }
 
   const boutonEco = document.getElementById('filtreEco');
   if (boutonEco && boutonEco.classList.contains('active')) {
@@ -117,6 +178,10 @@ function afficherCovoiturages() {
     });
   }
 
+  if (searchPassengers > 0) {
+    trajetsFiltres = trajetsFiltres.filter(trajet => trajet.places_disponibles >= searchPassengers);
+  }
+
   const aucunResultat = document.getElementById('aucun-resultat');
   if (trajetsFiltres.length === 0) {
     if (aucunResultat) aucunResultat.style.display = 'block';
@@ -131,8 +196,12 @@ const trajetsAffiches = trajetsFiltres.slice(0, limiteCovoiturages);
     copie.classList.remove('modele-covoiturage');
     copie.style.display = 'flex';
 
-    copie.addEventListener('click', () => {
-      window.location.href = `../Pages/details.html?id=${trajet.id}`;
+    copie.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const nbrPassengers = document.getElementById('select-passengers').value;
+
+      window.location.href = `../Pages/details.html?id=${trajet.id}&passengers=${nbrPassengers}`;
     });
 
     const chauffeur = data.utilisateurs.find(u => u.id === trajet.chauffeur_id);
@@ -266,6 +335,8 @@ function initialiserFiltres() {
     maxPriceInput.addEventListener('input', afficherCovoiturages);
   }
 
+  // Gestion des étoiles pour le filtre de note
+
   stars.forEach(star => {
     star.addEventListener('mouseover', () => {
       const value = parseInt(star.dataset.value);
@@ -287,6 +358,7 @@ function initialiserFiltres() {
       afficherCovoiturages();
     });
   });
+
 }
 
 function dureeEnMinutes(duree) {

@@ -33,19 +33,30 @@
                 </div>
             </div>
             <section class="main-section">
+                <section>
                 <div class="search-bar" required>
-                    <input type="text" placeholder="Départ">
-                    <input type="text" placeholder="Destination">
-                    <input type="date" placeholder="Date" style="color:#777;" onchange="this.style.color='#000';">
-                        <select class="form-search" required>
-                            <option value="" disabled selected hidden>Nombre de passagers</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                    <select id="select-depart" required>
+                        <option value="" disabled selected hidden>Départ</option>
+                    </select>
+
+                    <select id="select-destination" required>
+                        <option value="" disabled selected hidden>Destination</option>
+                    </select>
+
+                    <select id="select-date" required>
+                        <option value="" disabled selected hidden>Date</option>
+                    </select>
+
+                    <select id="select-passengers" class="form-search" required>
+                        <option value="" disabled selected hidden>Nombre de passagers</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                         <hr class="vr">   
-                    <button type="rechercher" class="button-search-bar"><img src="..\assets\search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
+                    <button type="button" id="btn-search" class="button-search-bar"><img src="../assets/search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
                 </div>
+            </section>
                 <section class="card-presentation">
                     <div class="card">
                         <img src="..\assets\image-carte1.png" alt="Covoiturage 1">

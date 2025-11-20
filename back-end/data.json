@@ -249,7 +249,7 @@
             "préférences": {
                 "fumeur": true,
                 "animaux": false,
-                "autres": ["Musique Classique","Silence préféré","Long trajet fréquents"]
+                "autres": ["Musique Classique","Silence préféré"]
             }
         },
 
@@ -434,7 +434,8 @@
             "passager_id": 5,
             "covoiturage_id": 1,
             "note": 5,
-            "commentaire": "Marie est une excellente conductrice, le trajet était très agréable et ponctuel.",
+            "utilisateur_nom": "LarryQ.",
+            "commentaire": "Marie est une excellente conductrice, le trajet était très agréable et ponctuel.😊",
             "date": "2025-11-10",
             "statut": "Publié"
         },
@@ -445,7 +446,8 @@
             "passager_id": 6,
             "covoiturage_id": 1,
             "note": 3,
-            "commentaire": "Le trajet s'est bien passé, mais la voiture aurait pu être un peu plus propre.",
+            "utilisateur_nom": "PatrickC.",
+            "commentaire": "Le trajet s'est bien passé, mais la voiture aurait pu être un peu plus propre. 😉",
             "date": "2025-11-10",
             "statut": "Publié"
         },
@@ -456,7 +458,8 @@
             "passager_id": 8,
             "covoiturage_id": 3,
             "note": 4,
-            "commentaire": "Trajet parfait, Alain est très professionnel et sympathique.",
+            "utilisateur_nom": "UlrichB.",
+            "commentaire": "Trajet parfait, Alain est très professionnel et sympathique.😁",
             "date": "2025-11-05",
             "statut": "En attente"
         },
@@ -466,8 +469,9 @@
             "chauffeur_id": 2,
             "passager_id": 9,
             "covoiturage_id": 3,
-            "note": 3,
-            "commentaire": "Le trajet s'est bien passé, mais la voiture aurait pu être un peu plus propre.",
+            "note": 4,
+            "utilisateur_nom": "MoniqueL.",
+            "commentaire": "Le trajet s'est plutôt bien passé. Excellent goût musicaux !🎵",
             "date": "2025-11-05",
             "statut": "Publié"
         },
@@ -478,6 +482,7 @@
             "passager_id": 10,
             "covoiturage_id": 4,
             "note": 5,
+            "utilisateur_nom": "RyadM.",
             "commentaire": "Kader est un conducteur exceptionnel, le trajet était confortable et agréable.",
             "date": "2025-11-05",
             "statut": "Publié"
@@ -489,7 +494,8 @@
             "passager_id": 11,
             "covoiturage_id": 4,
             "note": 5,
-            "commentaire": "Le trajet avec Kader était fantastique, je le recommande vivement !",
+            "utilisateur_nom": "InesL.",
+            "commentaire": "Le trajet avec Kader était fantastique, je le recommande vivement ! 🚗💨",
             "date": "2025-11-05",
             "statut": "Publié"
         },
@@ -500,7 +506,8 @@
             "passager_id": 12,
             "covoiturage_id": 5,
             "note": 5,
-            "commentaire": "Claire est une conductrice très prudente et sympathique, le trajet était parfait.",
+            "utilisateur_nom": "BobbyD.",
+            "commentaire": "Claire est une conductrice très prudente et sympathique, le trajet était parfait.😄",
             "date": "2025-11-11",
             "statut": "Publié"
         }

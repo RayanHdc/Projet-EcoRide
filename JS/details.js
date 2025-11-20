@@ -1,9 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const TrajetID = parseInt(params.get('id')); 
+const nbrpassagers = (params.get('passengers')) || 1;
 
-if (!TrajetID) {
-    console.log("Aucun ID correspondant");
-}
 
 fetch('../back-end/data.json')
   .then(response => response.json())
@@ -60,8 +58,14 @@ fetch('../back-end/data.json')
         element.textContent = trajet.prix;
     });
     document.querySelectorAll('.places-disponibles-value').forEach(element => {
-        element.textContent = `${trajet.places_disponibles} places disponibles`;
+        element.textContent = `👥 ${trajet.places_disponibles} places disponibles`;
     });
+    if (nbrpassagers) {
+    document.querySelector('.nombre-passagers').textContent = `${nbrpassagers}  Passager(s)`;
+    }
+
+
+    
 
 
     const ecoInfo = document.querySelector('.infos-eco');
@@ -74,27 +78,54 @@ fetch('../back-end/data.json')
     const noAnimalsIcon = document.querySelector('.no-animals-icon');
 
     if (vehicule.préférences.fumeur === true) {
-        document.querySelector('#smoking-yes').style.display = 'flex';
-        document.querySelector('#smoking-no').style.display = 'none';
+        document.querySelectorAll('#smoking-yes').forEach(element => element.style.display = 'flex');
+        document.querySelectorAll('#smoking-no').forEach(element => element.style.display = 'none');
     } else {
-        document.querySelector('#smoking-yes').style.display = 'none';
-        document.querySelector('#smoking-no').style.display = 'flex';
+        document.querySelectorAll('#smoking-yes').forEach(element => element.style.display = 'none');
+        document.querySelectorAll('#smoking-no').forEach(element => element.style.display = 'flex');
     }
 
     if (vehicule.préférences.animaux) {
-        document.querySelector('#animals-yes').style.display = 'flex';
-        document.querySelector('#animals-no').style.display = 'none';
+        document.querySelectorAll('#animals-yes').forEach(element => element.style.display = 'flex');
+        document.querySelectorAll('#animals-no').forEach(element => element.style.display = 'none');
     } else {
-        document.querySelector('#animals-yes').style.display = 'none';
-        document.querySelector('#animals-no').style.display = 'flex';
+        document.querySelectorAll('#animals-yes').forEach(element => element.style.display = 'none');
+        document.querySelectorAll('#animals-no').forEach(element => element.style.display = 'flex');
     }
 
-    document.querySelector('.nom-chauffeur').textContent = chauffeur.nom;
+    document.querySelector('.nom-chauffeur').textContent = `${chauffeur.prénom} ${chauffeur.nom}`;
     document.querySelector('.voiture').textContent = `${vehicule.marque} ${vehicule.modèle} • ${vehicule.carburant}`;
+
+    document.querySelector('.autres-infos').innerHTML = vehicule.préférences.autres
+    .map(item => {
+        if (item.toLowerCase().includes('musique') || item.toLowerCase().includes('podcast')) return `🎵${item}`;
+        if (item.toLowerCase().includes('discussion') || item.toLowerCase().includes('animaux') || item.toLowerCase().includes('silence')) return `💬${item}`;
+        return `• ${item}`;
+    })
+    .join('<br><br>');
 
 
     AfficherNote(chauffeur.note);
-  }
+
+    const listeAvisContainer = document.querySelector('.liste-avis');
+    const modeleAvis = document.querySelector('.modele-avis');
+
+    const avisChauffeur = data.avis.filter(avis => avis.chauffeur_id === chauffeur.id);
+    listeAvisContainer.innerHTML = '';
+
+    avisChauffeur.forEach(avis => {
+        const avisElement = modeleAvis.cloneNode(true);
+        avisElement.classList.remove('modele-avis');
+        avisElement.style.display = 'flex';
+
+        avisElement.querySelector('.avis-nom').textContent = avis.utilisateur_nom;
+        avisElement.querySelector('.avis-rating').textContent = `${avis.note}★`;
+        avisElement.querySelector('.avis-commentaire').textContent = avis.commentaire;
+        
+
+        listeAvisContainer.appendChild(avisElement);
+    });
+    }
 
     function AfficherNote(note) {
         const ratingContainer = document.querySelector('.rating');

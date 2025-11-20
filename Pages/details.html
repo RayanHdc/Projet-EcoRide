@@ -29,7 +29,13 @@
         <section class="details-section">
             <div class="details-trajet">
 
-                <h2 class="date-trajet"></h2>
+                <div class="top-section">
+                    <h2 class="date-trajet"></h2>
+                    <div class="prix-detail">
+                        <span class="price-value"></span> 
+                        <img src="../assets/credit.png" alt="credit-icon"> 
+                    </div>
+                </div>
 
                 <div class="block-trajet">
                     <div class="itineraire-detail">
@@ -67,7 +73,7 @@
                     <div class="infos-droite">
                         <div class="infos-eco-detail">
                             <div class="infos-eco">
-                                <p>Voyage Écologique 🍃</p>  
+                                <p>🍃 Voyage Écologique</p>  
                             </div>
                         </div>
 
@@ -92,17 +98,12 @@
                                     <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
                                 </div>
                             </div>
-
-                        <div class="prix-detail">
-                            <span class="price-value"></span> 
-                            <img src="../assets/credit.png" alt="credit-icon"> 
-                        </div>
                     </div>
                 </div>
             </div>
 
             <aside class="reserver-detail-section">
-
+        
                 <h2 class="date-trajet"></h2>
 
                     <div class="itineraire-detail">
@@ -144,46 +145,65 @@
                     </div>    
 
                         <hr>
-                <div class="btn-reserver-detail-container">
-                    <a class="btn-reserver-detail" href="#confirmer-reservation">Réserver ce trajet</a>
-                </div>
+                    <div class="bottom-reservation">
+                        <div class="btn-reserver-detail-container">
+                            <a class="btn-reserver-detail" href="#confirmer-reservation">Réserver</a>
+                        </div>
+                    </div>
             </aside>
         </section>
 
         <section class="description-conducteur-section">
             <div class="detail-infos">
                 <div class="detail-header">
-                    <h2 class="nom-chauffeur"></h2>
-                    <div class="rating"></div>
-                    <p class="voiture"></p>
+                        <img src="../assets/person.svg" alt="photo-covoiturage" class="photo-chauffeur-detail">
+
+                    <div class="infos-container">
+                        <h2 class="nom-chauffeur"></h2>
+
+                        <div class="infos-utilisateur-detail">
+                            <div class="rating"></div>
+                            <p class="voiture"></p>
+                        </div>
+                    </div>
                 </div>
+                    <div class="preference-container">
+                        <div class="preferences-detail">
+                                <div id="smoking-yes" class="preference-icons">
+                                    <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon"><p>Fumeurs accepté(e)s</p>
+                                </div> 
 
-                    <div class="preferences">
-                            <div class="preference-icons">
-                                <img class="fumeur-icon" src="../assets/cigaret.png" alt="fumeur-icon"><p>Fumeurs accepté(e)s</p>
-                            </div> 
+                                <div id="smoking-no" class="preference-icons">
+                                    <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" ><p>Fumeurs non accepté(e)s</p>
+                                </div>
 
-                            <div class="preference-icons">
-                                <img class="non-fumeur-icon" src="../assets/no-smoke.png" alt="non-fumeur-icon" ><p>Fumeurs non accepté(e)s</p>
-                            </div>
+                                <div id="animals-yes"class="preference-icons">
+                                    <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" ><p>Animaux accepté(e)s</p>
+                                </div>
 
-                            <div class="preference-icons">
-                                <img class="animal-icon" src="../assets/paw.png" alt="animal-friendly" ><p>Animaux accepté(e)s</p>
-                            </div>
+                                <div id="animals-no" class="preference-icons">
+                                    <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
+                                </div>
+                        </div>
 
-                            <div class="preference-icons">
-                                <img class="no-animals-icon" src="../assets/no-animals.png" alt="no-animals-icon" ><p>Animaux non accepté(e)s</p>
-                            </div>
+                        <hr class="vr-separator-infos">
+
+                        <div class="autres-infos"></div>
                     </div>
 
-                    <hr class="vr">
-
-                    <div class="autres-infos"></div>
-
-                <hr>
+                <hr class="separator-avis">
                 <div class="avis-conducteur">
                     <h3>Avis</h3>
-                        <div class="liste-avis"></div>
+                        <div class="avis modele-avis" style="display: none;">
+                            <div class="avis-header">
+                                <span><img src="../assets/person.svg" alt="avis-photo" class="avis-image"></span>
+                                <h4 class="avis-nom"></h4>
+                                <div class="avis-rating"></div>
+                            </div>
+                            <p class="avis-commentaire"></p>
+
+                        </div>
+                    <div class="liste-avis"></div>
                 </div>
             </div>
         </section>

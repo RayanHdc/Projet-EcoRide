@@ -39,14 +39,14 @@
                         <option value="" disabled selected hidden>Date</option>
                     </select>
 
-                    <select class="form-search" required>
+                    <select id="select-passengers" class="form-search" required>
                         <option value="" disabled selected hidden>Nombre de passagers</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                        <option value="3">3</option>
+                    </select>
                         <hr class="vr">   
-                    <button type="rechercher" class="button-search-bar"><img src="../assets/search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
+                    <button type="button" id="btn-search" class="button-search-bar"><img src="../assets/search-icon-vector.png" alt="Rechercher" height="20" width="20"></button>
                 </div>
             </section>
             
@@ -100,7 +100,7 @@
                      <p id="aucun-resultat" class="no-result">Aucun Covoiturage ne correspond à votre recherche ! 😕 </p>
                     <div id="liste-covoiturages">
                         <div class="card-covoiturage modele-covoiturage">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="photo-covoiturage" class="photo-chauffeur">
+                                    <img src="../assets/person.svg" alt="photo-covoiturage" class="photo-chauffeur">
                                     <div class="card-infos">
                                         <div class="card-header">
                                             <h2 class="nom-chauffeur"></h2>
